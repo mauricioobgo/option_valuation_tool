@@ -1,3 +1,6 @@
+"""
+Primary Class for Option Valuation, calculates binomial, BlackSholes and Put Call Parity
+"""
 import numpy as np
 
 
