@@ -20,7 +20,7 @@ def index():
 
 @app.route('/process')
 def process():
-    return jsonify(option_type= "Response_ok")
+    return jsonify(option_type= array_type_option)
 
 if __name__=="__main__":
     app.run(debug=True)

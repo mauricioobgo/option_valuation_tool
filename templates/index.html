@@ -3,25 +3,46 @@
 
 {% endblock %}
 {% block body %}
+
 <section class="container-fluid">
     <section class="row justify-content-center">
-        <section class="col-12 col-sm-6 col-md-3">
-                 <form class="form-container" action="/" method="POST">
+        <section class="col-md-5 mb-3">
+                 <form class="form-container" style="padding: 10%;">
                       <div class="form-group">
-                            <label for="option_type">User Name</label>
-                            <select name="option_type" id="option_type">
+                            <label for="option_type">Tipo  de Opción a Valorar</label>
+                            <select name="option_type" id="option_type">    
                             </select>
                       </div>
                       <div class="form-group">
-                            <label for="pass_word">Password</label>
-                            <input type="password" class="form-control" name="pass_word" id="pass_word" placeholder="Password">
+                            <label for="option_spot">Spot Value de La Opción</label>
+                            <input type="text" class="form-control" name="option_spot" id="option_spot" placeholder="Spot de La Opción">
+                      </div>
+                      <div class="form-group">
+                        <label for="option_strike">Strike Value de La Opción</label>
+                        <input type="text" class="form-control" name="option_strike" id="option_strike" placeholder="Strike de La Opción">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="option_rate">Tasa de interes de La Opción</label>
+                      <input type="text" class="form-control" name="option_rate" id="option_rate" placeholder="Interes Continuo de La Opción de La Opción">
+                    </div>
+                    <div class="form-group">
+                        <label for="option_sd_risk">Desviación Estandar de La Opción</label>
+                        <input type="text" class="form-control" name="option_sd_risk" id="option_sd_risk" placeholder="Desviación Estandar de La Opción">
+                      </div>
+                      <div class="form-group">
+                        <label for="option_time_years">Tiempo en Años de La Opción</label>
+                        <input type="text" class="form-control" name="option_time_years" id="option_time_years" placeholder="Tiempo en Años de La Opción">
+                      </div>                      
+                      <div class="form-group">
+                        <label for="option_node_calc">Nodos</label>
+                        <input type="text" class="form-control" name="option_node_calc" id="option_node_calc" placeholder="Número de Nodos de Valoración">
                       </div>
                      <a href="/user_creator.html">Si eres nuevo Resgitrate aquí</a>
 
                      <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                     {% if validation %}
-                        <label >Debes registrarte primero</label>
-                     {% endif %}
+                     <div style="visibility: hidden;"class="alert alert-primary" role="alert" id="option_value_result">
+                      </div>
                 </form>
             </section>
         </section>
