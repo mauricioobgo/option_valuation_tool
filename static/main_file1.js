@@ -74,14 +74,14 @@ $(document).ready(function () {
                             }
                         }
                     });
-                    /*for ( i in data.finalValue){
+                    for ( i in data_reponse.finalValue){
                         console.log(i);
                         console.log(values_selected[counter]);
                             $('#results_adding').append(`<tr><td>${values_selected[counter]}
-                            </td><td> ${data.finalValue[i]}</td> </tr>`);
+                            </td><td> ${data_reponse.finalValue[i]}</td> </tr>`);
                             counter += 1;
 
-                    }*/
+                    }
                     
                      },
                 failure: function (errMsg) {

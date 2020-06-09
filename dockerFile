@@ -1,0 +1,13 @@
+FROM python:3.8
+
+RUN pip install flask gunicorn
+RUN pip install pandas gunicorn
+RUN pip install scipy gunicorn
+
+COPY option_valuation_expand/ main_app/
+WORKDIR /main_app
+
+ENV PORT 8080
+
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:main_app
+
